@@ -39,9 +39,9 @@ return require('packer').startup(function(use)
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },     -- Required
+      { 'hrsh7th/nvim-cmp' }, -- Required
       { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-      { 'L3MON4D3/LuaSnip' }      -- Required
+      { 'L3MON4D3/LuaSnip' } -- Required
     },
   }
   use {
@@ -58,6 +58,11 @@ return require('packer').startup(function(use)
   use 'beauwilliams/statusline.lua'
   use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
+  use({ "ziontee113/color-picker.nvim",
+    config = function()
+      require("color-picker")
+    end,
+  })
 
   -- Debugging
   use 'nvim-lua/plenary.nvim'
